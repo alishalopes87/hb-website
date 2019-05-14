@@ -7,7 +7,7 @@ class App extends React.Component {
 		venues: []
 	}
   componentDidMount() {
-    axios.get(`http://localhost:3000/venues`)
+    axios.get(`http://localhost:5000/venues`)
       .then(res => {
         const venues = res.data.data.children.map(obj => obj.data);
         this.setState({ venues });
